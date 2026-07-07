@@ -1,15 +1,14 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/842176af-1964-47de-9dde-9e747044502a" alt="icon-dark" width="257.5"/>
-  <img src="https://github.com/user-attachments/assets/6f41a501-1088-4487-8fbb-81373a58dfe6" alt="icon-light" width="257.5"/>
+  <img src="img/icon.svg" alt="COMP WebRing icon" width="260"/>
 </div>
 
 # COMP™ WebRing
-   
-A WebRing for University of Toronto Engineering students and the broader UofT community. This WebRing connects personal websites, portfolios, and blogs of UofT students, faculty, and alumni.
 
-## About
+> This WebRing repository is dedicated to the UNICAMP community.
+>
+> Original credit goes to [ayan20985/skule-webring](https://github.com/ayan20985/skule-webring/tree/main).
 
-The COMP™ WebRing connects websites of UofT COMP™ members through a retro-inspired WebRing. It's a way to discover interesting sites, share your work, and build connections.
+The COMP™ WebRing connects websites of UICAMP COMP™ members through a retro-inspired WebRing. It's a way to discover interesting sites, share your work, and build connections.
 
 ## Joining the WebRing
 
@@ -23,7 +22,7 @@ The COMP™ WebRing connects websites of UofT COMP™ members through a retro-in
 
 3. **Widget Integration** - The WebRing widget must be included on your website in an accessible location (preferably in the footer or sidebar).
 
-4. **UofT Affiliation** - You must be a UofT student, alumni, faculty, or staff member that is in the Faculty of Applied Science and Engineering. Special consideration can be granted by sending an email to [webring@skule.ca](mailto:webring@skule.ca).
+4. **UNICAMP Affiliation** - You must be a member of the Computer Institute at UNICAMP. Special consideration can be granted by sending an email to [webring@skule.ca](mailto:webring@skule.ca).
 
 ### Join Process
 
@@ -166,9 +165,10 @@ Badges must be 88x31 pixels or some multiple of this, they can png, .gif, or .sv
 
 Inspired by the [XXIIVV WebRing](https://WebRing.xxiivv.com/) and the early web's interconnected spirit.
 
+This project also credits the original work in [ayan20985/skule-webring](https://github.com/ayan20985/skule-webring/tree/main).
+
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/842176af-1964-47de-9dde-9e747044502a" alt="icon-dark" width="257.5"/>
-  <img src="https://github.com/user-attachments/assets/6f41a501-1088-4487-8fbb-81373a58dfe6" alt="icon-light" width="257.5"/>
+  <img src="img/icon.svg" alt="COMP WebRing icon" width="260"/>
 </div>
 
 
