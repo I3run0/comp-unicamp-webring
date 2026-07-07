@@ -1,0 +1,23 @@
+window.I18N_EN = {
+  'site.title': 'COMP™ WebRing',
+  'site.subtitle': 'A WebRing for Computer Science and Engineering students and the broader University of Campinas community.',
+  'about.p1': 'This WebRing serves to inspire students of UNICAMP to build their own websites and share traffic amongst each other. The ring welcomes <strong>websites made with hands</strong>.',
+  'members.title': 'Membership Directory',
+  'members.countText': 'This webring currently has <span id="member-count">0</span> members. Last updated <span id="last-updated">January 2025</span>.',
+  'search.placeholder': 'Search members by name, website, or program...',
+  'action.search': 'Search',
+  'action.report': 'Report Broken Link',
+  'action.join': 'Join the Ring',
+  'action.benefits': 'Benefits',
+  'action.random': 'Random',
+  'action.github': 'GitHub',
+  'action.email': 'Email',
+  'what.title': 'What is a WebRing?',
+  'what.p1': 'A WebRing is a collection of websites linked together in a circular structure. Each site in the ring includes a navigation widget that lets visitors travel to the next or previous site in the ring.',
+  'what.p2': 'In this way, the WebRing increases the visibility of your website by way of placing it on the first page of Google search results or other search engines. The WebRing also increases the traffic on your website by way of other websites linking to your website. For a more detailed explanation, please refer to the <a href="benefits.html">benefits page</a>.',
+  'what.p3': 'The COMP™ WebRing revives this tradition for the UNICAMP community, creating a network of personal websites by students and alumni.',
+  'benefits.title': 'COMP™ WebRing SEO Benefits',
+  'benefits.subtitle': 'How joining the COMP™ WebRing boosts your search rankings and online visibility.',
+  'benefits.p1': 'Every member of the COMP WebRing creates high-quality backlinks to your website. Search engines like Google use backlinks as a key ranking factor. With <strong><span id="benefits-member-count">0</span> active members</strong> and growing, you gain authoritative backlinks from fellow UofT engineering students and alumni.',
+  'footer.credit': 'Created by <a href="https://ayanali.net">Ayan Ali 2T8</a> for the <a href="https://skule.ca">COMP™ Community</a>. Built on Canada Dry, a most interesting beverage.'
+};

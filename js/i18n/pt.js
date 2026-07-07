@@ -1,0 +1,23 @@
+window.I18N_PT = {
+  'site.title': 'COMP™ WebRing',
+  'site.subtitle': 'Um WebRing para estudantes de Ciência da Computação e Engenharia e a comunidade mais ampla da UNICAMP.',
+  'about.p1': 'Este WebRing inspira estudantes da UNICAMP a criarem seus próprios sites e compartilharem tráfego entre si. O anel apenas recebe <strong>sites feitos à mão</strong>.',
+  'members.title': 'Diretório de Membros',
+  'members.countText': 'Este webring atualmente tem <span id="member-count">0</span> membros. Última atualização <span id="last-updated">Janeiro 2025</span>.',
+  'search.placeholder': 'Pesquisar membros por nome, site ou programa...',
+  'action.search': 'Pesquisar',
+  'action.report': 'Reportar link quebrado',
+  'action.join': 'Entrar no Anel',
+  'action.benefits': 'Benefícios',
+  'action.random': 'Aleatório',
+  'action.github': 'GitHub',
+  'action.email': 'Email',
+  'what.title': 'O que é um WebRing?',
+  'what.p1': 'Um WebRing é uma coleção de sites ligados entre si em uma estrutura circular. Cada site no anel inclui um widget de navegação que permite aos visitantes viajar para o próximo ou anterior site no anel.',
+  'what.p2': 'Dessa forma, o WebRing aumenta a visibilidade do seu site, ajudando-o a aparecer nas primeiras páginas dos motores de busca. O WebRing também aumenta o tráfego do seu site por meio de links de outros sites. Para uma explicação mais detalhada, consulte a <a href="benefits.html">página de benefícios</a>.',
+  'what.p3': 'O COMP™ WebRing revive essa tradição para a comunidade UNICAMP, criando uma rede de sites pessoais por estudantes e ex-alunos.',
+  'benefits.title': 'Benefícios de SEO do COMP™ WebRing',
+  'benefits.subtitle': 'Como entrar no COMP™ WebRing melhora seu posicionamento em buscas e visibilidade online.',
+  'benefits.p1': 'Cada membro do COMP WebRing cria backlinks de alta qualidade para o seu site. Motores de busca como o Google usam backlinks como fator de rankeamento. Com <strong><span id="benefits-member-count">0</span> membros ativos</strong> e crescendo, você ganha backlinks autoritativos de colegas estudantes e ex-alunos.',
+  'footer.credit': 'Criado por <a href="https://ayanali.net">Ayan Ali 2T8</a> para a comunidade COMP™. Feito sobre Canada Dry, uma bebida bastante interessante.'
+};

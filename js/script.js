@@ -696,57 +696,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
     /* Internationalization (simple client-side translations) */
-    const I18N = {
-        en: {
-            'site.title': 'COMP™ WebRing',
-            'site.subtitle': 'A WebRing for Computer Science and Engineering students and the broader University of Campinas community.',
-            'about.p1': 'This WebRing serves to inspire students of UNICAMP to build their own websites and share traffic amongst each other. The ring welcomes <strong>websites made with hands</strong>.',
-            'members.title': 'Membership Directory',
-            'members.countText': 'This webring currently has <span id="member-count">0</span> members. Last updated <span id="last-updated">January 2025</span>.',
-            'search.placeholder': 'Search members by name, website, or program...',
-            'action.search': 'Search',
-            'action.report': 'Report Broken Link',
-            'action.join': 'Join the Ring',
-            'action.benefits': 'Benefits',
-            'action.random': 'Random',
-            'action.github': 'GitHub',
-            'action.email': 'Email',
-            'what.title': 'What is a WebRing?',
-            'what.p1': 'A WebRing is a collection of websites linked together in a circular structure. Each site in the ring includes a navigation widget that lets visitors travel to the next or previous site in the ring.',
-            'what.p2': 'In this way, the WebRing increases the visibility of your website by way of placing it on the first page of Google search results or other search engines. The WebRing also increases the traffic on your website by way of other websites linking to your website. For a more detailed explanation, please refer to the <a href="benefits.html">benefits page</a>.',
-            'what.p3': 'The COMP™ WebRing revives this tradition for the UNICAMP community, creating a network of personal websites by students and alumni.',
-            'benefits.title': 'COMP™ WebRing SEO Benefits',
-            'benefits.subtitle': 'How joining the COMP™ WebRing boosts your search rankings and online visibility.',
-            'benefits.p1': 'Every member of the COMP WebRing creates high-quality backlinks to your website. Search engines like Google use backlinks as a key ranking factor. With <strong><span id="benefits-member-count">0</span> active members</strong> and growing, you gain authoritative backlinks from fellow UofT engineering students and alumni.',
-            'footer.credit': 'Created by <a href="https://ayanali.net">Ayan Ali 2T8</a> for the <a href="https://skule.ca">COMP™ Community</a>. Built on Canada Dry, a most interesting beverage.'
-        },
-        pt: {
-            'site.title': 'COMP™ WebRing',
-            'site.subtitle': 'Um WebRing para estudantes de Ciência da Computação e Engenharia e a comunidade mais ampla da UNICAMP.',
-            'about.p1': 'Este WebRing inspira estudantes da UNICAMP a criarem seus próprios sites e compartilharem tráfego entre si. O anel recebe <strong>sites feitos à mão</strong>.',
-            'members.title': ' Diretório de Membros',
-            'members.countText': 'Este webring atualmente tem <span id="member-count">0</span> membros. Última atualização <span id="last-updated">Janeiro 2025</span>.',
-            'search.placeholder': 'Pesquisar membros por nome, site ou programa...',
-            'action.search': 'Pesquisar',
-            'action.report': 'Reportar link quebrado',
-            'action.join': 'Entrar no Anel',
-            'action.benefits': 'Benefícios',
-            'action.random': 'Aleatório',
-            'action.github': 'GitHub',
-            'action.email': 'Email',
-            'what.title': 'O que é um WebRing?',
-            'what.p1': 'Um WebRing é uma coleção de sites ligados entre si em uma estrutura circular. Cada site no anel inclui um widget de navegação que permite aos visitantes viajar para o próximo ou anterior site no anel.',
-            'what.p2': 'Dessa forma, o WebRing aumenta a visibilidade do seu site, ajudando-o a aparecer nas primeiras páginas dos motores de busca. O WebRing também aumenta o tráfego do seu site por meio de links de outros sites. Para uma explicação mais detalhada, consulte a <a href="benefits.html">página de benefícios</a>.',
-            'what.p3': 'O COMP™ WebRing revive essa tradição para a comunidade UNICAMP, criando uma rede de sites pessoais por estudantes e ex-alunos.',
-            'benefits.title': 'Benefícios de SEO do COMP™ WebRing',
-            'benefits.subtitle': 'Como entrar no COMP™ WebRing melhora seu posicionamento em buscas e visibilidade online.',
-            'benefits.p1': 'Cada membro do COMP WebRing cria backlinks de alta qualidade para o seu site. Motores de busca como o Google usam backlinks como fator de rankeamento. Com <strong><span id="benefits-member-count">0</span> membros ativos</strong> e crescendo, você ganha backlinks autoritativos de colegas estudantes e ex-alunos.',
-            'footer.credit': 'Criado por <a href="https://ayanali.net">Ayan Ali 2T8</a> para a comunidade COMP™. Feito sobre Canada Dry, uma bebida bastante interessante.'
+    let I18N = window.I18N_EN || {};
+
+    async function loadLanguage(lang) {
+        const scriptUrl = lang === 'pt' ? 'js/i18n/pt.js' : 'js/i18n/en.js';
+        try {
+            await new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = scriptUrl;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
+
+            if (lang === 'pt' && window.I18N_PT) {
+                I18N = window.I18N_PT;
+            } else {
+                I18N = window.I18N_EN || {};
+            }
+
+            translatePage(lang);
+        } catch (error) {
+            console.error('Unable to load translations:', error);
         }
-    };
+    }
 
     function translatePage(lang) {
-        const dict = I18N[lang] || I18N.en;
+        const dict = I18N || {};
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (dict[key]) el.innerHTML = dict[key];
@@ -759,7 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (langBtn) {
             const span = langBtn.querySelector('.theme-icon');
             // Show the flag for the language that will be switched TO when clicking.
-            const nextFlag = lang === 'pt' ? 'EG' : 'BR';
+            const nextFlag = lang === 'pt' ? '🇪🇬' : '🇧🇷';
             if (span) span.textContent = nextFlag;
             else langBtn.textContent = nextFlag;
         }
@@ -768,13 +744,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('DOMContentLoaded', () => {
         const savedLang = localStorage.getItem('lang') || 'en';
-        translatePage(savedLang);
         const btn = document.getElementById('lang-toggle-btn');
+
         if (btn) {
             btn.addEventListener('click', () => {
                 const current = localStorage.getItem('lang') || 'en';
                 const next = current === 'en' ? 'pt' : 'en';
-                translatePage(next);
+                loadLanguage(next);
             });
         }
+
+        loadLanguage(savedLang);
     });
