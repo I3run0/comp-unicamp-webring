@@ -18,6 +18,10 @@ window.I18N_EN = {
   'what.p3': 'The COMP™ WebRing revives this tradition for the UNICAMP community, creating a network of personal websites by students and alumni.',
   'benefits.title': 'COMP™ WebRing SEO Benefits',
   'benefits.subtitle': 'How joining the COMP™ WebRing boosts your search rankings and online visibility.',
+  'benefits.intro': 'Search engines rank pages using PageRank algorithms that evaluate link authority through graph theory. Each inbound link transfers link equity, a quantified trust signal based on the linking domain\'s authority score, topical relevance, and anchor text optimization. Google\'s RankBrain uses machine learning to assess E-A-T (Expertise, Authoritativeness, Trustworthiness) by analyzing link networks, user engagement metrics, and content quality signals.',
   'benefits.p1': 'Every member of the COMP WebRing creates high-quality backlinks to your website. Search engines like Google use backlinks as a key ranking factor. With <strong><span id="benefits-member-count">0</span> active members</strong> and growing, you gain authoritative backlinks from fellow UofT engineering students and alumni.',
+  'benefits.p2': 'These backlinks are from <strong>relevant, high-quality websites</strong> in your field, which Google values much more highly than random or low-quality links.',
+  'benefits.p3': 'Search engines evaluate your website\'s <strong>domain authority</strong> based on the quality and quantity of sites linking to you. The COMP WebRing provides instant credibility through association with the UofT engineering community, trust signals from established academic and professional websites, and topical relevance within your field of expertise.',
+  'benefits.p4': 'Beyond SEO, the COMP WebRing enhances your professional presence. Employers searching for UofT talent can find your profile, professors and researchers can discover your work, and fellow students and alumni can connect with you.',
   'footer.credit': 'Created by <a href="https://ayanali.net">Ayan Ali 2T8</a> for the <a href="https://skule.ca">COMP™ Community</a>. Built on Canada Dry, a most interesting beverage.'
 };

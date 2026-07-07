@@ -698,27 +698,11 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Internationalization (simple client-side translations) */
     let I18N = window.I18N_EN || {};
 
-    async function loadLanguage(lang) {
-        const scriptUrl = lang === 'pt' ? 'js/i18n/pt.js' : 'js/i18n/en.js';
-        try {
-            await new Promise((resolve, reject) => {
-                const script = document.createElement('script');
-                script.src = scriptUrl;
-                script.onload = resolve;
-                script.onerror = reject;
-                document.head.appendChild(script);
-            });
-
-            if (lang === 'pt' && window.I18N_PT) {
-                I18N = window.I18N_PT;
-            } else {
-                I18N = window.I18N_EN || {};
-            }
-
-            translatePage(lang);
-        } catch (error) {
-            console.error('Unable to load translations:', error);
-        }
+    function loadLanguage(lang) {
+        const nextLang = lang === 'pt' ? 'pt' : 'en';
+        const dict = nextLang === 'pt' ? (window.I18N_PT || {}) : (window.I18N_EN || {});
+        I18N = dict;
+        translatePage(nextLang);
     }
 
     function translatePage(lang) {
@@ -739,6 +723,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (span) span.textContent = nextFlag;
             else langBtn.textContent = nextFlag;
         }
+        document.documentElement.lang = lang;
         localStorage.setItem('lang', lang);
     }
 

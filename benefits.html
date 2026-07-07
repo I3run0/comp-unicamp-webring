@@ -13,11 +13,11 @@
 <body>
     <header>
         <div class="theme-toggle">
+           <button id="lang-toggle-btn" aria-label="Toggle language" .>
+                <span class="theme-icon">🇪🇬</span>
+            </button>
             <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
                 <span class="theme-icon">◐</span>
-            </button>
-            <button id="lang-toggle-btn" aria-label="Toggle language">
-                <span class="theme-icon">🇪🇬</span>
             </button>
         </div>
         <h1 style="display: flex; align-items: center; gap: 0.5em;">
@@ -32,7 +32,7 @@
     <main>
         <section>
             <h2>SEO Principles and The Creation of a Powerful Backlink Network</h2>
-            <p>
+            <p data-i18n="benefits.intro">
                 Search engines rank pages using PageRank algorithms that evaluate link authority through graph theory. 
                 Each inbound link transfers link equity, a quantified trust signal based on the linking domain's authority score, topical relevance, and anchor text optimization. 
                 Google's RankBrain uses machine learning to assess E-A-T (Expertise, Authoritativeness, Trustworthiness) by analyzing link networks, user engagement metrics, and content quality signals.
@@ -41,17 +41,17 @@
                 Every member of the COMP WebRing creates high-quality backlinks to your website. 
                 Search engines like Google use backlinks as a key ranking factor. With <strong><span id="benefits-member-count">0</span> active members</strong> and growing, you gain authoritative backlinks from fellow UofT engineering students and alumni.
             </p>
-            <p>
+            <p data-i18n="benefits.p2">
                 These backlinks are from <strong>relevant, high-quality websites</strong> in your field, which Google values much more highly than random or low-quality links.
             </p>
         </section>
 
         <section>
             <h2>Domain Authority Boost and Professional Network Visibility</h2>
-            <p>
+            <p data-i18n="benefits.p3">
                 Search engines evaluate your website's <strong>domain authority</strong> based on the quality and quantity of sites linking to you. The COMP WebRing provides instant credibility through association with the UofT engineering community, trust signals from established academic and professional websites, and topical relevance within your field of expertise.
             </p>
-            <p></p>
+            <p data-i18n="benefits.p4">
                 Beyond SEO, the COMP WebRing enhances your professional presence. Employers searching for UofT talent can find your profile, professors and researchers can discover your work, and fellow students and alumni can connect with you.
             </p>
         </section>
@@ -61,6 +61,8 @@
         <p>Created by <a href="https://ayanali.net">Ayan Ali 2T8</a> for the <a href="https://skule.ca">SKULE™ Community</a>. Built on Canada Dry, a most interesting beverage.</p>
     </footer>
 
+    <script src="js/i18n/en.js"></script>
+    <script src="js/i18n/pt.js"></script>
     <script src="js/script.js"></script>
     <script>
       function updateHeaderIcon() {

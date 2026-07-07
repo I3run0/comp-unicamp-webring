@@ -1,6 +1,6 @@
 window.I18N_PT = {
   'site.title': 'COMP™ WebRing',
-  'site.subtitle': 'Um WebRing para estudantes de Ciência da Computação e Engenharia e a comunidade mais ampla da UNICAMP.',
+  'site.subtitle': 'Um WebRing para estudantes de Ciência e Engenharia da Computação e a comunidade mais ampla da UNICAMP.',
   'about.p1': 'Este WebRing inspira estudantes da UNICAMP a criarem seus próprios sites e compartilharem tráfego entre si. O anel apenas recebe <strong>sites feitos à mão</strong>.',
   'members.title': 'Diretório de Membros',
   'members.countText': 'Este webring atualmente tem <span id="member-count">0</span> membros. Última atualização <span id="last-updated">Janeiro 2025</span>.',
@@ -18,6 +18,10 @@ window.I18N_PT = {
   'what.p3': 'O COMP™ WebRing revive essa tradição para a comunidade UNICAMP, criando uma rede de sites pessoais por estudantes e ex-alunos.',
   'benefits.title': 'Benefícios de SEO do COMP™ WebRing',
   'benefits.subtitle': 'Como entrar no COMP™ WebRing melhora seu posicionamento em buscas e visibilidade online.',
+  'benefits.intro': 'Motores de busca classificam páginas usando algoritmos PageRank que avaliam a autoridade dos links por meio da teoria dos grafos. Cada link recebido transfere equity de link, um sinal de confiança quantificado com base na autoridade do domínio que faz o link, relevância tópica e otimização do texto âncora. O RankBrain do Google usa aprendizado de máquina para avaliar E-A-T (Expertise, Authoritativeness, Trustworthiness) analisando redes de links, métricas de engajamento do usuário e sinais de qualidade de conteúdo.',
   'benefits.p1': 'Cada membro do COMP WebRing cria backlinks de alta qualidade para o seu site. Motores de busca como o Google usam backlinks como fator de rankeamento. Com <strong><span id="benefits-member-count">0</span> membros ativos</strong> e crescendo, você ganha backlinks autoritativos de colegas estudantes e ex-alunos.',
+  'benefits.p2': 'Esses backlinks vêm de <strong>sites relevantes e de alta qualidade</strong> em sua área, que o Google valoriza muito mais do que links aleatórios ou de baixa qualidade.',
+  'benefits.p3': 'Motores de busca avaliam a <strong>domain authority</strong> do seu site com base na qualidade e na quantidade de sites que apontam para ele. O COMP WebRing oferece credibilidade instantânea por meio da associação com a comunidade de engenharia da UofT, sinais de confiança de sites acadêmicos e profissionais estabelecidos e relevância tópica dentro da sua área de especialização.',
+  'benefits.p4': 'Além de SEO, o COMP WebRing melhora sua presença profissional. Empregadores que buscam talentos da UofT podem encontrar seu perfil, professores e pesquisadores podem descobrir seu trabalho, e colegas estudantes e ex-alunos podem se conectar com você.',
   'footer.credit': 'Criado por <a href="https://ayanali.net">Ayan Ali 2T8</a> para a comunidade COMP™. Feito sobre Canada Dry, uma bebida bastante interessante.'
 };
