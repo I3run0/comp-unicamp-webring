@@ -3,13 +3,13 @@
   <img src="https://github.com/user-attachments/assets/6f41a501-1088-4487-8fbb-81373a58dfe6" alt="icon-light" width="257.5"/>
 </div>
 
-# SKULE™ WebRing
+# COMP™ WebRing
    
 A WebRing for University of Toronto Engineering students and the broader UofT community. This WebRing connects personal websites, portfolios, and blogs of UofT students, faculty, and alumni.
 
 ## About
 
-The SKULE™ WebRing connects websites of UofT SKULE™ members through a retro-inspired WebRing. It's a way to discover interesting sites, share your work, and build connections.
+The COMP™ WebRing connects websites of UofT COMP™ members through a retro-inspired WebRing. It's a way to discover interesting sites, share your work, and build connections.
 
 ## Joining the WebRing
 
@@ -84,7 +84,7 @@ Since every website is unique, we suggest you add your own flair to the icon. He
 <div style="display: flex; align-items: center; gap: 15px; background-color: #f5f5f5; padding: 15px 25px; border-radius: 8px; border: 1px solid #ddd;">
     <a href="https://WebRing.skule.ca/#https://your-website.com?nav=prev" style="color: #333; text-decoration: none; font-size: 1.5rem;">←</a>
 <a href="https://WebRing.skule.ca/#https://your-website.com" target="_blank">
-<img src="https://WebRing.skule.ca/img/icon.svg" alt="SKULE WebRing" style="width: 32px; height: 32px;"/>
+<img src="https://WebRing.skule.ca/img/icon.svg" alt="COMP WebRing" style="width: 32px; height: 32px;"/>
 </a>
 <a href="https://WebRing.skule.ca/#https://your-website.com?nav=next" style="color: #333; text-decoration: none; font-size: 1.5rem;">→</a>
 </div>
@@ -96,7 +96,7 @@ Since every website is unique, we suggest you add your own flair to the icon. He
 <div style="display: flex; align-items: center; gap: 15px; background-color: #2a2a2a; padding: 15px 25px; border-radius: 8px; border: 1px solid #444;">
     <a href="https://WebRing.skule.ca/#https://your-website.com?nav=prev" style="color: #e0e0e0; text-decoration: none; font-size: 1.5rem;">←</a>
 <a href="https://WebRing.skule.ca/#https://your-website.com" target="_blank">
-<img src="https://WebRing.skule.ca/img/icon-dark.svg" alt="SKULE WebRing" style="width: 32px; height: 32px;"/>
+<img src="https://WebRing.skule.ca/img/icon-dark.svg" alt="COMP WebRing" style="width: 32px; height: 32px;"/>
 </a>
 <a href="https://WebRing.skule.ca/#https://your-website.com?nav=next" style="color: #e0e0e0; text-decoration: none; font-size: 1.5rem;">→</a>
 </div>
@@ -116,7 +116,7 @@ Since every website is unique, we suggest you add your own flair to the icon. He
 }}>
     <a href='https://WebRing.skule.ca/#https://your-website.com?nav=prev' style={{ color: '#333', textDecoration: 'none', fontSize: '1.5rem' }}>←</a>
 <a href='https://WebRing.skule.ca/#https://your-website.com' target='_blank'>
-<img src='https://WebRing.skule.ca/img/icon.svg' alt='SKULE WebRing' style={{ width: '32px', height: '32px' }}/>
+<img src='https://WebRing.skule.ca/img/icon.svg' alt='COMP WebRing' style={{ width: '32px', height: '32px' }}/>
 </a>
 <a href='https://WebRing.skule.ca/#https://your-website.com?nav=next' style={{ color: '#333', textDecoration: 'none', fontSize: '1.5rem' }}>→</a>
 </div>
@@ -136,7 +136,7 @@ Since every website is unique, we suggest you add your own flair to the icon. He
 }}>
     <a href='https://WebRing.skule.ca/#https://your-website.com?nav=prev' style={{ color: '#e0e0e0', textDecoration: 'none', fontSize: '1.5rem' }}>←</a>
 <a href='https://WebRing.skule.ca/#https://your-website.com' target='_blank'>
-<img src='https://WebRing.skule.ca/img/icon-dark.svg' alt='SKULE WebRing' style={{ width: '32px', height: '32px' }}/>
+<img src='https://WebRing.skule.ca/img/icon-dark.svg' alt='COMP WebRing' style={{ width: '32px', height: '32px' }}/>
 </a>
 <a href='https://WebRing.skule.ca/#https://your-website.com?nav=next' style={{ color: '#e0e0e0', textDecoration: 'none', fontSize: '1.5rem' }}>→</a>
 </div>
