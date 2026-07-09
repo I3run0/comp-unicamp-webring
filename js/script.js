@@ -1,5 +1,46 @@
 const WEBRING_DATA_PATH = 'js/webring-data.json';
-let members = [];
+let members = [
+           {
+      "name": "Ayan Ali",
+      "specialLink": "ayan",
+      "website": "https://ayanali.net",
+      "program": "CS",
+      "designation": "MSC",
+      "year": "2020",
+      "grad": "2025",
+      "badge": "https://ayanali.net/badge.gif"
+    },
+    {
+      "name": "Ayan Ali",
+      "specialLink": "ayan",
+      "website": "https://ayanali.net",
+      "program": "CS",
+      "designation": "MSC",
+      "year": "2020",
+      "grad": "2025",
+      "badge": "https://ayanali.net/badge.gif"
+    },
+    {
+      "name": "Ayan Ali",
+      "specialLink": "ayan",
+      "website": "https://ayanali.net",
+      "program": "CS",
+      "designation": "MSC",
+      "year": "2020",
+      "grad": "2025",
+      "badge": "https://ayanali.net/badge.gif"
+    },
+    {
+      "name": "Bruno",
+      "specialLink": "ayan",
+      "website": "https://ayanali.net",
+      "program": "CS",
+      "designation": "MSC",
+      "year": "2020",
+      "grad": "2025",
+      "badge": "https://ayanali.net/badge.gif"
+    }   
+];
 let lastUpdated = '';
 
 async function loadWebringData() {
@@ -33,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Check for saved theme preference or prefer-color-scheme
     const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: light)').matches;
     
     // Function to update icon based on theme
     function updateIcon(theme) {
@@ -239,7 +280,7 @@ function renderMembersList(container, membersArray, currentPage, membersPerPage)
         const program = member.program || member.faculty || '';
         const designation = member.designation || '';
         const year = member.year || '';
-        const grad = formatGradYear(member.grad) || '';
+        const grad = member.grad || '';
         
         // Create badge cell with image and link separately to ensure proper rendering
         const badgeCell = document.createElement('td');
@@ -445,27 +486,6 @@ function formatUrl(url, keepPath = false) {
     
     // Remove trailing slash if any
     return formattedUrl.replace(/\/$/, '');
-}
-
-// Format graduation year to support both standard and UofT formats
-function formatGradYear(grad) {
-    if (!grad) return 'N/A';
-    
-    // If it's already in UofT format (e.g., 2T5)
-    if (/^\d{1}T\d{1}$/i.test(grad)) {
-        return grad.toUpperCase();
-    }
-    
-    // If it's a standard year (e.g., 2025)
-    if (/^20\d{2}$/.test(grad)) {
-        const year = grad.substring(2); // Get the last two digits
-        const firstDigit = year.charAt(0);
-        const lastDigit = year.charAt(1);
-        return `${firstDigit}T${lastDigit}`;
-    }
-    
-    // If it's neither format, just return as is
-    return grad;
 }
 
 const WEBRING_HOME_URL = 'https://webring.skule.ca';
@@ -719,7 +739,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (langBtn) {
             const span = langBtn.querySelector('.theme-icon');
             // Show the flag for the language that will be switched TO when clicking.
-            const nextFlag = lang === 'pt' ? '🇪🇬' : '🇧🇷';
+            const nextFlag = lang === 'pt' ? 'EG' : 'BR';
             if (span) span.textContent = nextFlag;
             else langBtn.textContent = nextFlag;
         }

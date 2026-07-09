@@ -27,14 +27,14 @@
                 <span class="theme-icon">🇪🇬</span>
             </button>
 
-            <!-- For while we are not supporting the dark mode
+            <!-- For while we are not supporting the dark mode -->
             <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
                 <span class="theme-icon">◐</span>
             </button>
-             -->
+            
         </div>
         <h1 style="display: flex; align-items: center; gap: 0.5em;">
-            <a href="https://webring.skule.ca">
+            <a href="#">
                 <img src="img/icon.svg" alt="WebRing Icon" width="32" height="32" style="vertical-align: middle;" id="header-webring-icon"/>
             </a>
             <span data-i18n="site.title">COMP™ WebRing</span>
@@ -46,13 +46,13 @@
         <!-- Webring Widget for Navigation -->
         <section class="webring-nav" style="display: flex; justify-content: center; margin-bottom: -15px;">
             <div class="widget-container classic-beveled-panel">
-                <a href="#webring.skule.ca?nav=prev">←</a>
-                <a href="https://webring.skule.ca">
+                <a href="#?nav=prev">←</a>
+                <a href="#">
                     <div class="widget-icon">
                         <img src="img/icon.svg" alt="COMP WebRing" width="32" height="32" id="homepage-widget-icon"/>
                     </div>
                 </a>
-                <a href="#webring.skule.ca?nav=next">→</a>
+                <a href="#?nav=next">→</a>
             </div>
         </section>
 
@@ -68,13 +68,13 @@
             </div>
             <div class="action-buttons">
                 <a href="#" id="report-link" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.report">Report Broken Link</a>
-                <a href="https://github.com/ayan20985/webring#joining-the-webring" target="_blank" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.join">Join the Ring</a>
+                <a href="https://github.com/I3run0/comp-unicamp-webring#joining-the-webring" target="_blank" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.join">Join the Ring</a>
                 <a href="benefits.html" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.benefits">Benefits</a>
                 <a href="#random" id="random-link" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.random">Random</a>
-                <a href="https://github.com/ayan20985/webring" target="_blank" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.github">GitHub</a>
-                <a href="mailto:webring@skule.ca" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.email">Email</a>
+                <a href="https://github.com/I3run0/comp-unicamp-webring" target="_blank" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.github">GitHub</a>
+                <a href="mailto:b217787@dac.unicamp.br" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.email">Email</a>
             </div>
-            <div class="table-container">
+            <div class="table-container classic-beveled-panel">
                 <div class="scroll-indicator left" id="scroll-left">‹</div>
                 <div class="table-wrapper" id="table-wrapper">
                     <table id="members-table">
@@ -102,31 +102,20 @@
             </div>
         </section>
 
-        <section id="what" style="margin-bottom: -30px; padding-bottom: 0;">
-            <h2 data-i18n="what.title">What is a WebRing?</h2>
-            <p data-i18n="what.p1">
-                A WebRing is a collection of websites linked together in a circular structure.
-                In the early days of the web, WebRings were a popular way to discover related websites.
-                Each site in the ring includes a navigation widget that lets visitors travel to the next or previous site in the ring.
-            </p>
-            <p data-i18n="what.p2">
-                In this way, the WebRing increases the visibility of your website by way of placing it on the first page of Google search results or other search engines. 
-                The WebRing also increases the traffic on your website by way of other websites linking to your website. For a more detailed explanation, 
-                please refer to the <a href="benefits.html">benefits page</a>.
-            </p>
-            <p data-i18n="what.p3">
-                The COMP™ WebRing revives this tradition for the UNICAMP community, creating a network
-                of personal websites by students and alumni. The current UNICAMP community and Alumni network is thousands-strong—why not harness this immense network?
-            </p>
-        </section>
+    <section id="what" style="margin-bottom: -30px; padding-bottom: 0;"> 
+        <h2 data-i18n="what.title">What is a WebRing?</h2> 
+            <p data-i18n="what.p1"> A WebRing is a community of independent websites connected through a shared navigation system. By placing a small widget on each site, visitors can seamlessly browse from one member's website to another, making it easy to discover personal pages, blogs, portfolios, and research websites. </p>
+            <p data-i18n="what.p2"> Originally popular in the early days of the Internet, WebRings encouraged exploration beyond search engines and social media. Today, they continue to foster communities by connecting people with shared interests while helping members increase the visibility and reach of their personal websites. </p> 
+            <p data-i18n="what.p3"> The goal of the COMP™ WebRing is to build a vibrant online community for students, alumni, faculty, and researchers from the Institute of Computing (IC) at UNICAMP by connecting their personal websites and making them easier to discover. This project was inspired by the <a href="https://github.com/ayan20985/skule-webring" target="_blank" rel="noopener noreferrer">skule-webring</a> repository. </p> </section>
     </main>
 
     <footer style="display: flex; justify-content: center;">
-        <p>Created by <a href="https://ayanali.net">Ayan Ali 2T8</a> for the <a href="https://skule.ca">SKULE™ Community</a>. Built on Canada Dry, a most interesting beverage.</p>
+        <p>Created by <a href="https://ayanali.net">Ayan Ali 2T8</a>. Built on Canada Dry, a most interesting beverage.</p>
     </footer>
 
     <script src="js/i18n/en.js"></script>
     <script src="js/i18n/pt.js"></script>
+    <script src="js/webring-data.json"></script>
     <script src="js/script.js"></script>
     <script>
       function updateHeaderIcon() {
