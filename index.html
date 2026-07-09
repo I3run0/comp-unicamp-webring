@@ -26,9 +26,12 @@
             <button id="lang-toggle-btn" aria-label="Toggle language" .>
                 <span class="theme-icon">🇪🇬</span>
             </button>
+
+            <!-- For while we are not supporting the dark mode
             <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
                 <span class="theme-icon">◐</span>
             </button>
+             -->
         </div>
         <h1 style="display: flex; align-items: center; gap: 0.5em;">
             <a href="https://webring.skule.ca">
@@ -42,7 +45,7 @@
     <main>
         <!-- Webring Widget for Navigation -->
         <section class="webring-nav" style="display: flex; justify-content: center; margin-bottom: -15px;">
-            <div class="widget-container">
+            <div class="widget-container classic-beveled-panel">
                 <a href="#webring.skule.ca?nav=prev">←</a>
                 <a href="https://webring.skule.ca">
                     <div class="widget-icon">
@@ -53,12 +56,6 @@
             </div>
         </section>
 
-        <section class="about" style="margin-bottom: 50px; margin-top: 25px;">
-            <p data-i18n="about.p1">
-                This WebRing serves to inspire students of UNICAMP to build their own websites and share traffic amongst each other.
-                The ring welcomes <strong>websites made with hands</strong>.
-            </p>
-        </section>
 
         <section id="members">
             <h2 data-i18n="members.title">Membership Directory</h2>
@@ -66,16 +63,16 @@
             <div class="search-container" id="search">
                 <div class="search-bar">
                     <input type="text" id="member-search" placeholder="Search members by name, website, or program..." data-i18n-placeholder="search.placeholder">
-                    <button id="search-button" data-i18n="action.search">Search</button>
+                    <button id="search-button" class="netscape-classic-btn classic-beveled-panel" data-i18n="action.search">Search</button>
                 </div>
             </div>
             <div class="action-buttons">
-                <a href="#" id="report-link" class="action-button" data-i18n="action.report">Report Broken Link</a>
-                <a href="https://github.com/ayan20985/webring#joining-the-webring" target="_blank" class="action-button" data-i18n="action.join">Join the Ring</a>
-                <a href="benefits.html" class="action-button" data-i18n="action.benefits">Benefits</a>
-                <a href="#random" id="random-link" class="action-button" data-i18n="action.random">Random</a>
-                <a href="https://github.com/ayan20985/webring" target="_blank" class="action-button" data-i18n="action.github">GitHub</a>
-                <a href="mailto:webring@skule.ca" class="action-button" data-i18n="action.email">Email</a>
+                <a href="#" id="report-link" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.report">Report Broken Link</a>
+                <a href="https://github.com/ayan20985/webring#joining-the-webring" target="_blank" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.join">Join the Ring</a>
+                <a href="benefits.html" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.benefits">Benefits</a>
+                <a href="#random" id="random-link" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.random">Random</a>
+                <a href="https://github.com/ayan20985/webring" target="_blank" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.github">GitHub</a>
+                <a href="mailto:webring@skule.ca" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.email">Email</a>
             </div>
             <div class="table-container">
                 <div class="scroll-indicator left" id="scroll-left">‹</div>
