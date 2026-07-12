@@ -1,46 +1,5 @@
 const WEBRING_DATA_PATH = 'js/webring-data.json';
-let members = [
-           {
-      "name": "Ayan Ali",
-      "specialLink": "ayan",
-      "website": "https://ayanali.net",
-      "program": "CS",
-      "designation": "MSC",
-      "year": "2020",
-      "grad": "2025",
-      "badge": "https://ayanali.net/badge.gif"
-    },
-    {
-      "name": "Ayan Ali",
-      "specialLink": "ayan",
-      "website": "https://ayanali.net",
-      "program": "CS",
-      "designation": "MSC",
-      "year": "2020",
-      "grad": "2025",
-      "badge": "https://ayanali.net/badge.gif"
-    },
-    {
-      "name": "Ayan Ali",
-      "specialLink": "ayan",
-      "website": "https://ayanali.net",
-      "program": "CS",
-      "designation": "MSC",
-      "year": "2020",
-      "grad": "2025",
-      "badge": "https://ayanali.net/badge.gif"
-    },
-    {
-      "name": "Bruno",
-      "specialLink": "ayan",
-      "website": "https://ayanali.net",
-      "program": "CS",
-      "designation": "MSC",
-      "year": "2020",
-      "grad": "2025",
-      "badge": "https://ayanali.net/badge.gif"
-    }   
-];
+let members = [];
 let lastUpdated = '';
 
 async function loadWebringData() {
@@ -69,13 +28,23 @@ function updateBenefitsMemberCount() {
 
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', async () => {
-    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    //const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const langToggleBtn = document.getElementById('lang-toggle-btn')
     const dataLoadPromise = loadWebringData();
     
     // Check for saved theme preference or prefer-color-scheme
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: light)').matches;
-    
+    //const savedTheme = localStorage.getItem('theme');
+    //const prefersDark = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+    // -----------------------------------------------------------------
+    // DARK MODE IS CURRENTLY DISABLED.
+    // The site only supports light mode for now. The full dark-mode
+    // handler (icon + badge swapping, toggle button listener) is kept
+    // below, commented out, so it can be restored later simply by
+    // uncommenting this block and re-adding the #theme-toggle-btn
+    // element / CSS hooks it depends on.
+    // -----------------------------------------------------------------
+    /*
     // Function to update icon based on theme
     function updateIcon(theme) {
         // Add timestamp to prevent caching
@@ -104,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             badge.src = `${defaultBadgePath}?t=${timestamp}`;
         });
     }
-    
+
     // Apply theme based on saved preference or system preference
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         document.body.setAttribute('data-theme', 'dark');
@@ -112,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         updateIcon('light');
     }
-    
+
     // Toggle theme on button click
     themeToggleBtn.addEventListener('click', () => {
         const currentTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -120,11 +89,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         localStorage.setItem('theme', currentTheme);
         updateIcon(currentTheme);
     });
+    */
+
+    // Light-mode-only icon setup (replaces the disabled updateIcon() above).
+    // Kept intentionally minimal since only the light icon is supported right now.
+    function updateIcon() {
+        const timestamp = new Date().getTime();
+        const iconPath = 'img/icon.svg';
+
+        const widgetIconImg = document.getElementById('widget-demo-icon');
+        if (widgetIconImg) {
+            widgetIconImg.src = `${iconPath}?t=${timestamp}`;
+        }
+
+        const homepageWidgetIcon = document.getElementById('homepage-widget-icon');
+        if (homepageWidgetIcon) {
+            homepageWidgetIcon.src = `${iconPath}?t=${timestamp}`;
+        }
+    }
+
+    updateIcon();
     
     // Preload badge images to ensure they're in the browser cache
     function preloadBadgeImages() {
-        // Preload both light and dark default badges
-        const defaultBadges = ['badges/default-badge.png', 'badges/default-badge-dark.png'];
+        // Preload the (light-only) default badge.
+        // NOTE: 'badges/default-badge-dark.png' preload removed while dark mode is disabled;
+        // re-add it here if dark mode support is restored.
+        const defaultBadges = ['badges/default-badge.png'];
         
         // Preload all member badges
         const memberBadges = members.map(member => member.badge).filter(badge => badge);
@@ -150,7 +141,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (reportLinkBtn) {
         reportLinkBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const issueUrl = "https://github.com/ayan20985/webring/issues/new";
+            const issueUrl = "https://github.com/I3run0/comp-unicamp-webring/issues/new";
             const issueTitle = encodeURIComponent("Broken Link Report");
             const issueBody = encodeURIComponent("## Broken Link Report\n\nPlease fill out the information below:\n\n* **Website URL**: [Enter the broken link here]\n* **Member Name**: [Enter member name if known]\n* **Issue Description**: [Describe the issue (e.g., site not loading, domain expired)]\n\nThank you for helping maintain the webring!");
             window.open(`${issueUrl}?title=${issueTitle}&body=${issueBody}`, '_blank');
@@ -179,7 +170,10 @@ function initWebring() {
 
     if (!Array.isArray(members) || members.length === 0) {
         memberCountElement.textContent = '0';
-        membersList.innerHTML = '<tr><td colspan="7">No members available.</td></tr>';
+        // Use the localized string when available so this message respects the
+        // currently selected language (falls back to English if the key/dict is missing).
+        const emptyMessage = (I18N && I18N.noMembersAvailable) || 'No members available.';
+        membersList.innerHTML = `<tr><td colspan="7">${emptyMessage}</td></tr>`;
         return;
     }
     
@@ -250,7 +244,30 @@ function initWebring() {
     renderPagination(paginationContainer, filteredMembers.length, currentPage, membersPerPage);
 }
 
-// Render the list of members with pagination
+// -----------------------------------------------------------------------
+// Rendering the members table — what this function is responsible for,
+// and what it deliberately does NOT do:
+//
+// 1. COLUMN ORDER: this function builds each <tr> in a fixed column order:
+//       badge | website | name | program | designation | year | grad
+//    That order must match the <thead> markup in the HTML file 1-to-1,
+//    otherwise data will line up under the wrong header.
+//
+// 2. COLUMN NAMES / HEADERS: this function only fills in row DATA — it does
+//    NOT generate the header row/column names. Header text lives as static
+//    markup in the HTML (<th data-i18n="...">) and is localized separately
+//    by translatePage(lang), which swaps in the matching string from
+//    window.I18N_EN / window.I18N_PT for the active language. So:
+//      - If you add/rename/reorder a column here, update the matching
+//        <th data-i18n="..."> in the HTML AND the I18N_EN/I18N_PT dictionaries.
+//      - Do NOT hardcode header text in JS — it will not respect the
+//        language toggle. Always go through the I18N dictionaries so the
+//        column names switch correctly when the user toggles pt/en.
+//
+// 3. LOCALIZED IN-TABLE MESSAGES: any text this function *does* generate
+//    directly (e.g. the "no results" row below) must also pull from I18N
+//    rather than being hardcoded in English, for the same reason.
+// -----------------------------------------------------------------------
 function renderMembersList(container, membersArray, currentPage, membersPerPage) {
     // Clear container
     container.innerHTML = '';
@@ -263,14 +280,21 @@ function renderMembersList(container, membersArray, currentPage, membersPerPage)
     // If no members to display
     if (currentMembers.length === 0) {
         const row = document.createElement('tr');
-        row.innerHTML = `<td colspan="7">No matching members found.</td>`;
+        // Localized "no matching members" message (falls back to English).
+        const noMatchMessage = (I18N && I18N.noMatchingMembers) || 'No matching members found.';
+        row.innerHTML = `<td colspan="7">${noMatchMessage}</td>`;
         container.appendChild(row);
         return;
     }
     
-    // Determine current theme for default badge
+    // Dark mode is currently disabled, so the default badge is always the light one.
+    // (Original theme-aware logic is kept below, commented out, for when dark mode
+    // support is restored — re-enable together with the updateIcon() block above.)
+    /*
     const currentTheme = document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
     const defaultBadgePath = currentTheme === 'dark' ? 'badges/default-badge-dark.png' : 'badges/default-badge.png';
+    */
+    const defaultBadgePath = 'badges/default-badge.png';
     
     // Add each member row
     currentMembers.forEach(member => {
@@ -723,10 +747,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const dict = nextLang === 'pt' ? (window.I18N_PT || {}) : (window.I18N_EN || {});
         I18N = dict;
         translatePage(nextLang);
+
+        // Re-render the members table (if present on this page) so that any
+        // JS-generated, language-dependent strings — e.g. the "no members" /
+        // "no matching members" messages in renderMembersList/initWebring —
+        // pick up the newly selected language immediately, instead of only
+        // updating on the next search/pagination action.
+        const membersList = document.getElementById('members-list');
+        if (membersList && Array.isArray(members) && members.length > 0) {
+            const searchInput = document.getElementById('member-search');
+            const paginationContainer = document.getElementById('members-pagination');
+            const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            const filteredMembers = searchTerm
+                ? members.filter(member => (
+                    (member.name && member.name.toLowerCase().includes(searchTerm)) ||
+                    (member.website && member.website.toLowerCase().includes(searchTerm)) ||
+                    (member.websitedisplay && member.websitedisplay.toLowerCase().includes(searchTerm)) ||
+                    (member.program && member.program.toLowerCase().includes(searchTerm)) ||
+                    (member.faculty && member.faculty.toLowerCase().includes(searchTerm)) ||
+                    (member.designation && member.designation.toLowerCase().includes(searchTerm))
+                  ))
+                : [...members];
+            renderMembersList(membersList, filteredMembers, 1, 30);
+            if (paginationContainer) {
+                renderPagination(paginationContainer, filteredMembers.length, 1, 30);
+            }
+        }
     }
 
     function translatePage(lang) {
         const dict = I18N || {};
+        // NOTE: this is also how table column headers get their localized names —
+        // the <th> elements in the HTML carry data-i18n="..." attributes, and this
+        // loop swaps in the correct string for the active language from I18N_EN/I18N_PT.
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (dict[key]) el.innerHTML = dict[key];
@@ -739,7 +792,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (langBtn) {
             const span = langBtn.querySelector('.theme-icon');
             // Show the flag for the language that will be switched TO when clicking.
-            const nextFlag = lang === 'pt' ? 'EG' : 'BR';
+            const nextFlag = lang === 'pt' ? '🇬🇧' : '🇧🇷';
             if (span) span.textContent = nextFlag;
             else langBtn.textContent = nextFlag;
         }

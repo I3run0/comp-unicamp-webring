@@ -13,15 +13,11 @@ window.I18N_PT = {
   'action.github': 'GitHub',
   'action.email': 'Email',
   'what.title': 'O que é um WebRing?',
-  'what.p1': 'Um WebRing é uma coleção de sites ligados entre si em uma estrutura circular. Cada site no anel inclui um widget de navegação que permite aos visitantes viajar para o próximo ou anterior site no anel.',
-  'what.p2': 'Dessa forma, o WebRing aumenta a visibilidade do seu site, ajudando-o a aparecer nas primeiras páginas dos motores de busca. O WebRing também aumenta o tráfego do seu site por meio de links de outros sites. Para uma explicação mais detalhada, consulte a <a href="benefits.html">página de benefícios</a>.',
-  'what.p3': 'O COMP™ WebRing revive essa tradição para a comunidade UNICAMP, criando uma rede de sites pessoais por estudantes e ex-alunos.',
-  'benefits.title': 'Benefícios de SEO do COMP™ WebRing',
-  'benefits.subtitle': 'Como entrar no COMP™ WebRing melhora seu posicionamento em buscas e visibilidade online.',
-  'benefits.intro': 'Motores de busca classificam páginas usando algoritmos PageRank que avaliam a autoridade dos links por meio da teoria dos grafos. Cada link recebido transfere equity de link, um sinal de confiança quantificado com base na autoridade do domínio que faz o link, relevância tópica e otimização do texto âncora. O RankBrain do Google usa aprendizado de máquina para avaliar E-A-T (Expertise, Authoritativeness, Trustworthiness) analisando redes de links, métricas de engajamento do usuário e sinais de qualidade de conteúdo.',
-  'benefits.p1': 'Cada membro do COMP WebRing cria backlinks de alta qualidade para o seu site. Motores de busca como o Google usam backlinks como fator de rankeamento. Com <strong><span id="benefits-member-count">0</span> membros ativos</strong> e crescendo, você ganha backlinks autoritativos de colegas estudantes e ex-alunos.',
-  'benefits.p2': 'Esses backlinks vêm de <strong>sites relevantes e de alta qualidade</strong> em sua área, que o Google valoriza muito mais do que links aleatórios ou de baixa qualidade.',
-  'benefits.p3': 'Motores de busca avaliam a <strong>domain authority</strong> do seu site com base na qualidade e na quantidade de sites que apontam para ele. O COMP WebRing oferece credibilidade instantânea por meio da associação com a comunidade de engenharia da UofT, sinais de confiança de sites acadêmicos e profissionais estabelecidos e relevância tópica dentro da sua área de especialização.',
-  'benefits.p4': 'Além de SEO, o COMP WebRing melhora sua presença profissional. Empregadores que buscam talentos da UofT podem encontrar seu perfil, professores e pesquisadores podem descobrir seu trabalho, e colegas estudantes e ex-alunos podem se conectar com você.',
-  'footer.credit': 'Criado por <a href="https://ayanali.net">Ayan Ali 2T8</a> para a comunidade COMP™. Feito sobre Canada Dry, uma bebida bastante interessante.'
+  'what.p1': 'Um WebRing é uma comunidade de sites independentes conectados por um sistema de navegação compartilhado. Ao adicionar um pequeno widget a cada site, os visitantes podem descobrir facilmente páginas pessoais, blogs, portfólios e sites de pesquisa.',
+  'what.p2': 'Antes dos mecanismos de busca modernos e das redes sociais, os WebRings ajudavam as pessoas a descobrir sites relacionados navegando de uma página para outra. Hoje, eles continuam conectando comunidades enquanto aumentam a visibilidade dos sites de seus membros por meio de links compartilhados e de uma maior capacidade de serem encontrados em mecanismos de busca.',
+  'what.p3': 'O COMP™ WebRing tem como objetivo criar uma comunidade online para estudantes, ex-alunos, professores e pesquisadores do Instituto de Computação (IC) da UNICAMP, conectando seus sites pessoais. Este projeto foi inspirado no repositório <a href="https://github.com/ayan20985/skule-webring" target="_blank" rel="noopener noreferrer">skule-webring</a>.',
+  'footer.credit': 'Criado por <a href="https://ayanali.net">Ayan Ali 2T8</a> para a comunidade COMP™. Feito sobre Canada Dry, uma bebida bastante interessante.',
+  'table.name': "Nome",
+  'table.site': "Website",
+  'table.program': "Programa"
 };

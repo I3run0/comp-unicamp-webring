@@ -24,13 +24,14 @@
     <header>
         <div class="theme-toggle">
             <button id="lang-toggle-btn" aria-label="Toggle language" .>
-                <span class="theme-icon">🇪🇬</span>
+                <span class="theme-icon">🇧🇷</span>
             </button>
-
-            <!-- For while we are not supporting the dark mode -->
+            
+            <!-- For while we are not supporting the darkmode
             <button id="theme-toggle-btn" aria-label="Toggle dark/light mode">
                 <span class="theme-icon">◐</span>
             </button>
+            -->
             
         </div>
         <h1 style="display: flex; align-items: center; gap: 0.5em;">
@@ -69,7 +70,6 @@
             <div class="action-buttons">
                 <a href="#" id="report-link" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.report">Report Broken Link</a>
                 <a href="https://github.com/I3run0/comp-unicamp-webring#joining-the-webring" target="_blank" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.join">Join the Ring</a>
-                <a href="benefits.html" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.benefits">Benefits</a>
                 <a href="#random" id="random-link" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.random">Random</a>
                 <a href="https://github.com/I3run0/comp-unicamp-webring" target="_blank" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.github">GitHub</a>
                 <a href="mailto:b217787@dac.unicamp.br" class="action-button netscape-classic-btn classic-beveled-panel" data-i18n="action.email">Email</a>
@@ -81,9 +81,9 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Website</th>
-                                <th>Name</th>
-                                <th>Program</th>
+                                <th data-i18n="table.site">Website</th>
+                                <th data-i18n="table.name">Name</th>
+                                <th data-i18n="table.program">Program</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -102,11 +102,12 @@
             </div>
         </section>
 
-    <section id="what" style="margin-bottom: -30px; padding-bottom: 0;"> 
-        <h2 data-i18n="what.title">What is a WebRing?</h2> 
-            <p data-i18n="what.p1"> A WebRing is a community of independent websites connected through a shared navigation system. By placing a small widget on each site, visitors can seamlessly browse from one member's website to another, making it easy to discover personal pages, blogs, portfolios, and research websites. </p>
-            <p data-i18n="what.p2"> Originally popular in the early days of the Internet, WebRings encouraged exploration beyond search engines and social media. Today, they continue to foster communities by connecting people with shared interests while helping members increase the visibility and reach of their personal websites. </p> 
-            <p data-i18n="what.p3"> The goal of the COMP™ WebRing is to build a vibrant online community for students, alumni, faculty, and researchers from the Institute of Computing (IC) at UNICAMP by connecting their personal websites and making them easier to discover. This project was inspired by the <a href="https://github.com/ayan20985/skule-webring" target="_blank" rel="noopener noreferrer">skule-webring</a> repository. </p> </section>
+        <section id="what" style="margin-bottom: -30px; padding-bottom: 0;"> 
+            <h2 data-i18n="what.title">What is a WebRing?</h2> 
+            <p data-i18n="what.p1"> A WebRing is a community of independent websites connected through a shared navigation system. By adding a small widget to each site, visitors can easily discover personal pages, blogs, portfolios, and research websites. </p> 
+            <p data-i18n="what.p2"> Before modern search engines and social media, WebRings helped people discover related websites by browsing from one page to another. Today, they continue to connect communities while making members' websites easier to find through both the WebRing itself and improved visibility on search engines. </p> 
+            <p data-i18n="what.p3"> The COMP™ WebRing aims to build an online community for students, alumni, faculty, and researchers from the Institute of Computing (IC) at UNICAMP by connecting their personal websites. This project was clear inspired by and use code from the <a href="https://github.com/ayan20985/skule-webring" target="_blank" rel="noopener noreferrer">skule-webring</a> repository. </p> 
+        </section>
     </main>
 
     <footer style="display: flex; justify-content: center;">
@@ -115,7 +116,6 @@
 
     <script src="js/i18n/en.js"></script>
     <script src="js/i18n/pt.js"></script>
-    <script src="js/webring-data.json"></script>
     <script src="js/script.js"></script>
     <script>
       function updateHeaderIcon() {
